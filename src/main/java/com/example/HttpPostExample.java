@@ -14,6 +14,7 @@ public class HttpPostExample {
     HttpURLConnection con = (HttpURLConnection) obj.openConnection();
     con.setRequestMethod("POST");
     con.setRequestProperty("Content-Type", "application/json");
+    con.setRequestProperty("Feed-Name", "option-quotes");
     con.setDoOutput(true);
 
     try (OutputStream os = con.getOutputStream()) {
